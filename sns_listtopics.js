@@ -4,13 +4,13 @@ const AWS = require('aws-sdk');
 AWS.config.update({ region: 'us-east-2' });
 
 // Create promise and SNS service object
-const createTopicPromise = new AWS.SNS({ apiVersion: '2010-03-31' })
-  .createTopic({ Name: "NODE_TOPIC" })
+const listTopicsPromise = new AWS.SNS({ apiVersion: '2010-03-31' })
+  .listTopics({})
   .promise();
 
 // Handle promise's fulfilled/rejected states
-createTopicPromise
+listTopicsPromise
   .then(data =>
-    console.log("Topic ARN is " + data.TopicArn))
+    console.log(data.Topics))
   .catch(err =>
     console.error(err, err.stack));
