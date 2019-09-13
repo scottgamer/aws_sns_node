@@ -1,7 +1,7 @@
 {
   "name": "aws_sns_node",
   "version": "1.0.0",
-  "description": "Example notification project using aws sns service ",
+  "description": "Notification project example using aws sns service ",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
