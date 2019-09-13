@@ -5,7 +5,7 @@ AWS.config.update({ region: 'us-east-2' });
 
 // Create publish parameters
 const params = {
-  Message: 'Second notification', /* required */
+  Message: 'Third notification', /* required */
   TopicArn: 'arn:aws:sns:us-east-2:817439561489:NODE_TOPIC'
 };
 
